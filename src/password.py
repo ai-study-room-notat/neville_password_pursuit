@@ -5,4 +5,5 @@ PASSWORD_LEVEL2 = "lum0slum0s"
 PASSWORD_DICT = {
     'leve10': PASSWORD_LEVEL0,
     'leve11': PASSWORD_LEVEL1,
+    'leve12': PASSWORD_LEVEL2,
 }
