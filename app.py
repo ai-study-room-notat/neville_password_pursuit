@@ -50,6 +50,10 @@ def show_result(answer_check, answer):
             st.error('不正解', icon="❌")
 
 
+def show_image():
+    st.image('./assets/image.jpeg')
+
+
 def invoke(user_input):
     st.session_state.current_user_input = user_input
 
@@ -75,6 +79,8 @@ def main():
     input_open_api_key()
 
     if 'open_api_key' in st.session_state:
+        show_image()
+
         os.environ["OPENAI_API_KEY"] = st.session_state.open_api_key
 
         set_level()

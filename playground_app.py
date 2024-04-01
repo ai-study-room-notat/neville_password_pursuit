@@ -6,6 +6,7 @@ from app import input_open_api_key
 from app import invoke
 from app import show_chat
 from app import show_result
+from app import show_image
 
 from src.template import TEMPLATE_DICT
 from src.password import PASSWORD_DICT
@@ -28,6 +29,8 @@ def main():
     input_open_api_key()
 
     if 'open_api_key' in st.session_state:
+        show_image()
+
         os.environ["OPENAI_API_KEY"] = st.session_state.open_api_key
 
         input_template()
