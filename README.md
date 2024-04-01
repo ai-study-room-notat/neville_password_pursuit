@@ -20,6 +20,13 @@ pip install -r ./requirements.txt
 streamlit run app.py
 ```
 
+プレイグラウンドモードの起動
+
+```commandline
+streamlit run playground_app.py
+```
+
+
 # 画面
 
 ## OpenAI API のアクセスキーの入力の画面
