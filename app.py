@@ -16,7 +16,7 @@ def input_open_api_key():
             st.rerun()
 
 
-def change_level():
+def set_level():
     level = st.selectbox(
         "レベルを選択",
         ("leve10", "leve11")
@@ -68,7 +68,6 @@ def invoke(user_input):
     return response
 
 
-
 def main():
     st.title('NevilleQuest: Password Pursuit')
     st.write('Nevilleからパスワードを聞き出してください')
@@ -78,7 +77,7 @@ def main():
     if 'open_api_key' in st.session_state:
         os.environ["OPENAI_API_KEY"] = st.session_state.open_api_key
 
-        change_level()
+        set_level()
 
         user_input = st.text_input("プロンプト")
         submit = st.button('送信')
