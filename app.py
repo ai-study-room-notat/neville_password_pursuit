@@ -67,7 +67,7 @@ def invoke(user_input):
         user_input=user_input
     )
 
-    llm = OpenAI(temperature=0.9)
+    llm = OpenAI(temperature=0.0)
     response = llm.predict(prompt)
     return response
 
