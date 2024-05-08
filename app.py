@@ -19,12 +19,14 @@ def input_open_api_key():
 def set_level():
     level = st.selectbox(
         "レベルを選択",
-        ("leve10", "leve11")
+        tuple(TEMPLATE_DICT.keys())
     )
 
     if 'current_level' in st.session_state and st.session_state.current_level != level:
-        del st.session_state['current_user_input']
-        del st.session_state['response']
+        if 'current_user_input' in st.session_state:
+            del st.session_state['current_user_input']
+        if 'response' in st.session_state:
+            del st.session_state['response']
 
     st.session_state['template'] = TEMPLATE_DICT[level]
     st.session_state['password'] = PASSWORD_DICT[level]
